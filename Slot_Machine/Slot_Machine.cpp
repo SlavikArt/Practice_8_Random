@@ -17,6 +17,8 @@ int main()
     
     int arr[SIZE] = { 111, 222, 333, 444, 555 };
 
+    int money = 1000;
+
     bool isInArray;
 
     bool isZeroSixSeven;
@@ -39,18 +41,21 @@ int main()
             isZeroSixSeven = true;
             cout << "000\n";
             cout << "Вы выиграли 1000 грн!\n\n";
+            money += 1000;
         }
         else if (num1 == 6 && num2 == 6 && num3 == 6)
         {
             isZeroSixSeven = true;
             cout << "666\n";
             cout << "Штраф 1000 грн!\n\n";
+            money -= 1000;
         }
         else if (num1 == 7 && num2 == 7 && num3 == 7)
         {
             isZeroSixSeven = true;
             cout << "777\n";
             cout << "ДЖЕКПОТ!!!\n\n";
+            money += 1000000;
         }
 
         if (num1 == 0 || num2 == 0 || num3 == 0)
@@ -71,6 +76,7 @@ int main()
                     isInArray = true;
                     cout << sum << "\n";
                     cout << "Вы выиграли 1000 грн!\n\n";
+                    money += 1000;
                 }
             }
 
@@ -80,6 +86,8 @@ int main()
                 cout << "Ничего.\n\n";
             }
         }
+
+        cout << "Ваши деньги: " << money << "\n\n";
         
         system("pause");
         system("cls");
